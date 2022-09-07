@@ -22,8 +22,7 @@ module.exports = () => {
 
   event.dispatcher.on(event.test.failed, async error => {
     const { sessionId } = helpers.Appium.browser;
-    console.log(error);
     console.log(`msg${error.message}`);
-    await axios.put(`https://api-cloud.browserstack.com/app-automate/sessions/${sessionId}.json`, { status: 'failed', reason: error.message }, defaultBsAuth);
+    await axios.put(`${urlBS}${sessionId}.json`, { status: 'failed', reason: error.message }, defaultBsAuth);
   });
 };
