@@ -1,13 +1,12 @@
-# codeceptjs-bshelper
+#  codeceptjs-bshelper-app-automate
 CodeceptJS Browserstack plugin, to update Test Names, Test Results after test execution 
 
-codeceptjs-bshelper is [CodeceptJS](https://codecept.io/) plugin which is to complete tests results on Browserstack after execution. The plugin updates test name and
-test results on Browserstack using the `event.test.passed` and `event.test.failed` events.
+codeceptjs-bshelper-app-automate is [CodeceptJS](https://codecept.io/) plugin which is to complete tests results on Browserstack after execution. The plugin updates test name and test results on Browserstack using the `event.test.passed` and `event.test.failed` events.
 
-NPM package: <https://www.npmjs.com/package/codeceptjs-bshelper>
+NPM package: <https://www.npmjs.com/package/codeceptjs-bshelper-app-automate>
 
 ## Installation
-`npm i codeceptjs-bshelper --save-dev`
+`npm i  codeceptjs-bshelper-app-automate --save-dev`
 
 ## Configuration
 
@@ -20,10 +19,7 @@ Example:
 ...
    plugins: {
      BrowserstackHelper: {
-      require: 'codeceptjs-bshelper',
-      user: process.env.BROWSERSTACK_USERNAME,
-      key: process.env.BROWSERSTACK_ACCESS_KEY,
-      shortUrl: true,
+      require: 'codeceptjs-bshelper-app-automate',
       enabled: true
     }
    }
