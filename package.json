@@ -1,6 +1,6 @@
 {
   "name": "codeceptjs-bshelper-app-automate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Browserstack Publisher for Codecept JS tests",
   "repository": {
     "type": "git",
