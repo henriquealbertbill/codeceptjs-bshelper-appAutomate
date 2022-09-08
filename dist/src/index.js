@@ -20,9 +20,8 @@ module.exports = () => {
     await axios.put(`${urlBS}${sessionId}.json`, { status: 'passed' }, defaultBsAuth);
   });
 
-  event.dispatcher.on(event.test.failed, async error => {
+  event.dispatcher.on(event.test.failed, async (test, error) => {
     const { sessionId } = helpers.Appium.browser;
-    console.log(`msg${error.message}`);
     await axios.put(`${urlBS}${sessionId}.json`, { status: 'failed', reason: error.message }, defaultBsAuth);
   });
 };
